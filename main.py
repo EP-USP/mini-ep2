@@ -38,14 +38,16 @@ list_menu = []
 for string in table.stripped_strings:
     list_menu.append(string)
 
-# Tratar aqui o list_menu
-# ex. se tiver um / em list_menu[i], juntar as strings list_menu[i-1] e list_menu[i+1]
-# etc...
-
 # Gera uma lista contendo apenas o dia solicitado pelo usuario
 if args.dia == 'segunda':
     init = list_menu.index('SEGUNDA-FEIRA')
     end = list_menu.index('TERÇA-FEIRA')
-    for i in range(init, end):
-        print(list_menu[i])
+#    for i in range(init, end):
+#        print(list_menu[i])
 # Repetir a estrategia para os outros dias...
+
+# Tratar aqui a formatacao dos itens da lista
+# ex: remocao de espacos extras, ajustes de / , etc...
+
+# List comprehension contendo os indices do almoco e da janta de um dia especifico
+meal = [i for i, x in enumerate(list_menu) if x == 'TERÇA-FEIRA']
