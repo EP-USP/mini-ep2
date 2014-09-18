@@ -8,10 +8,10 @@ def main():
 
     parser = argparse.ArgumentParser()
 
-    parser.add_argument("-b", "--bandex", help="Local")
-    parser.add_argument("-d", "--dia", help="Dia da semana")
-    parser.add_argument("-a", "--almoco", help="Almoço")
-    parser.add_argument("-j", "--janta", help="Janta")
+    parser.add_argument('-b', 'bandex', help='Local')
+    parser.add_argument('-d', 'dia', help='Dia da semana')
+    parser.add_argument('-a', '--almoco', help='Almoço')
+    parser.add_argument('-j', '--janta', help='Janta')
 
     args = parser.parse_args()
 
@@ -26,7 +26,7 @@ def generate_raw_menu(self, bandex):
         url = 'http://www.usp.br/coseas/cardapiofisica.html'
     elif bandex == 'quimica':
         url = 'http://www.usp.br/coseas/cardapioquimica.html'
-    else
+    else:
         url = 'http://www.usp.br/coseas/cardcocesp.html'
 
     bandex_file = urlopen(url)
