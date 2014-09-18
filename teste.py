@@ -1,30 +1,23 @@
+from bs4 import BeautifulSoup
 from urllib.request import urlopen
 import html.parser
 import re
 
-class Menu(object):
-	pass
-
-class DiaDaSemana(object):
-	def __init__(self, dia, almoco, janta):
-		pass
-
-def select_html_tag(tag, string):
-	regex = '<' + tag + '[^>]*>(.*?)</' + tag + '[^>]*>'
-	return re.findall(regex, string, re.DOTALL|re.IGNORECASE)
-
-def get_text(html):
-	lista = re.findall("(?<=>)[^ <][^<]+(?=<)", html)
-	l = '\n'.join(lista)
-	l = l.replace('&nbsp;', '')
-	l = l.replace('/\n', '/')
-	return str(l)
-
-bandex_file = urlopen('http://www.usp.br/coseas/cardapio.html')
+bandex_file = urlopen('http://www.usp.br/coseas/cardapiofisica.html')
 bandex_html = bandex_file.read().decode('latin1')
 bandex_html = re.sub('\s{2,}', ' ', bandex_html)
 bandex_file.close()
 
-for tr_match in select_html_tag('tr', bandex_html):
-	for td_match in select_html_tag('td', tr_match):
-		print(get_text(td_match))
+soup = BeautifulSoup(bandex_html)
+table = soup.table
+
+for string in table.stripped_strings:
+    if re.search('/$', string):
+        print(format(string), end='')
+    else:
+        print(format(string))
+    
+
+# Isso é a mais pura apelação, mas ...
+# move_up = '\x1B[A'
+# move_right = '\x1B[' + str(len(string)) + 'C'
