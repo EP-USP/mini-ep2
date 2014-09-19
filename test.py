@@ -1,3 +1,5 @@
+from restaurante import Restaurante
+
 class Test(object):
 	
 	def compare(self, string1, string2):
@@ -40,11 +42,16 @@ class Test(object):
 		rest_central = Restaurante('central')
 		rest_fisica = Restaurante('fisica')
 		rest_quimica = Restaurante('quimica')
-		rest_pco = Restaurante('pco')
 
 		compare(rest_central.get_menu('segunda', 'almoco'), mon_lunch_central)
 		compare(rest_fisica.get_menu('sabado', 'almoco'), sat_lunch_phys)
 		compare(rest_quimica.get_menu('quarta', 'janta'), wed_dinner_chem)
 		compare(rest_pco.get_menu('sexta', 'almoco'), fri_lunch_pco)
 		compare(rest_pco.get_menu('sexta', 'janta'), fri_dinner_pco)
+
+		try:
+			Restaurante('fake')
+			print('O teste falhou! =(')
+		except:
+			print('O teste passou com sucesso!')
 
