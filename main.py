@@ -15,5 +15,5 @@ parser.add_argument('-j', '--janta', help='Janta', action='store_true')
 args = parser.parse_args()
 
 restaurante = Restaurante(args.bandex)
-restaurante.get_menu('DOMINGO', 'lunch')
+restaurante.get_menu('SEGUNDA-FEIRA', 'lunch')
 

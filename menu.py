@@ -58,7 +58,7 @@ class Menu(object):
         day_menu = self.generate_day_menu()
         init_meal = [i for i, x in enumerate(day_menu) if x == self.day]
         menu = ''
-        print(init_meal)
+
         if self.meal == 'lunch':
             meal_range = range(init_meal[0] + 1, init_meal[1])
         else:
