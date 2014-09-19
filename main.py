@@ -15,5 +15,8 @@ parser.add_argument('-j', '--janta', help='Janta', action='store_true')
 args = parser.parse_args()
 
 restaurante = Restaurante(args.bandex)
-restaurante.get_menu('SEGUNDA-FEIRA', 'lunch')
+if not args.almoco and not args.janta:
+    restaurante.print_menu(args.dia, True, True)
+else:
+    restaurante.print_menu(args.dia, args.almoco, args.janta)
 

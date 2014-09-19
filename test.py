@@ -1,15 +1,15 @@
 from restaurante import Restaurante
 
 class Test(object):
-	
+
 	def compare(self, string1, string2):
 		if string1 == string2:
 			print('O teste passou com sucesso!')
-		else
+		else:
 			print('O teste falhou! =(')
 
-	def main():
-		
+	def main(self):
+
 		mon_lunch_central = 'Arroz/feijão/arroz integral\n\
 		Hambúrguer barbecue\n\
 		Creme de milho\n\
@@ -43,11 +43,11 @@ class Test(object):
 		rest_fisica = Restaurante('fisica')
 		rest_quimica = Restaurante('quimica')
 
-		compare(rest_central.get_menu('segunda', 'almoco'), mon_lunch_central)
-		compare(rest_fisica.get_menu('sabado', 'almoco'), sat_lunch_phys)
-		compare(rest_quimica.get_menu('quarta', 'janta'), wed_dinner_chem)
-		compare(rest_pco.get_menu('sexta', 'almoco'), fri_lunch_pco)
-		compare(rest_pco.get_menu('sexta', 'janta'), fri_dinner_pco)
+		self.compare(rest_central.get_menu('segunda', 'almoco'), mon_lunch_central)
+		self.compare(rest_fisica.get_menu('sabado', 'almoco'), sat_lunch_phys)
+		self.compare(rest_quimica.get_menu('quarta', 'janta'), wed_dinner_chem)
+		self.compare(rest_pco.get_menu('sexta', 'almoco'), fri_lunch_pco)
+		self.compare(rest_pco.get_menu('sexta', 'janta'), fri_dinner_pco)
 
 		try:
 			Restaurante('fake')
@@ -55,3 +55,6 @@ class Test(object):
 		except:
 			print('O teste passou com sucesso!')
 
+
+test = Test()
+test.main()
