@@ -43,10 +43,15 @@ class Test(object):
 		rest_fisica = Restaurante('fisica')
 		rest_quimica = Restaurante('quimica')
 
+		print('Comparando - Bandejão central - Segunda-feira - Almoço:')
 		compare(rest_central.get_menu('segunda', 'almoco'), mon_lunch_central)
+		print('Comparando - Bandejão da Física - Sábado - Almoço:')
 		compare(rest_fisica.get_menu('sabado', 'almoco'), sat_lunch_phys)
+		print('Comparando - Bandejão da Química - Quarta-feira - Janta:')
 		compare(rest_quimica.get_menu('quarta', 'janta'), wed_dinner_chem)
+		print('Comparando - Bandejão PCO - Sexta-feira - Almoço:')
 		compare(rest_pco.get_menu('sexta', 'almoco'), fri_lunch_pco)
+		print('Comparando - Bandejão PCO - Sexta-feira - Janta:')
 		compare(rest_pco.get_menu('sexta', 'janta'), fri_dinner_pco)
 
 		try:
