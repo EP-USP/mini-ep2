@@ -1,10 +1,10 @@
 from urllib.request import urlopen
+import re
+from menu import Menu
 
-
-def Restaurante(object):
-	def __init__(self, name):
-		self.name = name
-
+class Restaurante(object):
+    def __init__(self, name):
+        self.name = name
 
 	def get_html(self):
 			if self.name == 'central':
@@ -23,6 +23,6 @@ def Restaurante(object):
 
 			return bandex_html
 
-	def get_menu(self, d, m):
-		menu = Menu(d, m)
-		print(menu.generate_meal_menu())
+    def get_menu(self, d, m):
+        menu = Menu(d, m, self.get_html())
+        print(menu.generate_meal_menu())
