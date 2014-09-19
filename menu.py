@@ -2,7 +2,6 @@ from bs4 import BeautifulSoup
 from urllib.request import urlopen
 
 class Menu(object):
-
 	def __init__(self, d, m):
 		self.day = d
 		self.meal = m
@@ -67,8 +66,3 @@ class Menu(object):
 				print(day_menu[i])
 
 		return menu
-
-
-
-
-
