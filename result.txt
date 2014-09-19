@@ -1,0 +1,59 @@
+Comparando - Bandejão central - Segunda-feira - Almoço:
+---Almoço---
+Arroz/feijão/arroz integral
+Hambúrguer barbecue
+Creme de milho
+Salada de escarola
+Opcional: PVT com legumes
+Bananinha/refresco
+Valor calórico de 1 refeição 1055 kcal
+O teste passou com sucesso!
+Arroz/feijão/arroz integral
+Hambúrguer barbecue
+Creme de milho
+Salada de escarola
+Opcional: PVT com legumes
+Bananinha/refresco
+Valor calórico de 1 refeição 1055 kcal
+Comparando - Bandejão da Física - Sábado - Almoço:
+---Almoço---
+FECHADO
+O teste passou com sucesso!
+FECHADO
+Comparando - Bandejão da Química - Quarta-feira - Janta:
+---Janta---
+ALERTA
+['Arroz / Feijão/Arroz integral\nPeixe ao forno\nChuchu na salsa\nSalada de alface\nOpcional: Quibe de PVT\nMamão\n', '876 kcal']
+Arroz/Feijão/Arroz integral
+Peixe ao forno
+Chuchu na salsa
+Salada de alface
+Opcional: Quibe de PVT
+Mamão
+Refresco
+876 kcal
+O teste passou com sucesso!
+Arroz/Feijão/Arroz integral
+Peixe ao forno
+Chuchu na salsa
+Salada de alface
+Opcional: Quibe de PVT
+Mamão
+Refresco
+876 kcal
+Comparando - Bandejão PCO - Sexta-feira - Almoço:
+---Almoço---
+Arroz/feijão/arroz integral
+Tiras de carne à cigana
+Mandioca corada
+Salada de almeirão
+Opcional: Bolinho de PVT ao molho shoyo
+Maçã/refresco
+Valor calórico de 1 refeição 829 kcal
+O teste passou com sucesso!
+Comparando - Bandejão PCO - Sexta-feira - Janta:
+---Janta---
+Fechado
+O teste passou com sucesso!
+Testando para um restaurante desconhecido:
+O teste passou com sucesso!
