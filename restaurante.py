@@ -2,8 +2,6 @@ from urllib.request import urlopen
 import re
 from menu import Menu
 
-class RestauranteNaoExiste(Exception):
-    pass
 
 class Restaurante(object):
 
