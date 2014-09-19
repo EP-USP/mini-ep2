@@ -2,16 +2,16 @@ from urllib.request import urlopen
 
 
 def Restaurante(object):
-	def __init__(self, nome):
-		self.nome = nome
+	def __init__(self, name):
+		self.name = name
 
 
 	def get_html(self):
-			if self.nome == 'central':
+			if self.name == 'central':
 	    		url = 'http://www.usp.br/coseas/cardapio.html'
-			elif self.nome == 'fisica':
+			elif self.name == 'fisica':
 	    		url = 'http://www.usp.br/coseas/cardapiofisica.html'
-			elif self.nome == 'quimica':
+			elif self.name == 'quimica':
 	    		url = 'http://www.usp.br/coseas/cardapioquimica.html'
 			else:
 	    		url = 'http://www.usp.br/coseas/cardcocesp.html'
