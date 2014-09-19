@@ -8,12 +8,13 @@ parser = argparse.ArgumentParser()
 
 parser.add_argument('-b', '--bandex', help='Local')
 parser.add_argument('-d', '--dia', help='Dia da semana')
-parser.add_argument('-a', '--almoco', help='Almoço')
-parser.add_argument('-j', '--janta', help='Janta')
+parser.add_argument('-a', '--almoco', help='Almoço', action='store_true')
+parser.add_argument('-j', '--janta', help='Janta', action='store_true')
 
 args = parser.parse_args()
 
 # Gera um cardapio 'bruto' em html para o bandejao escolhido pelo usuario
+print(args.almoco)
 
 if args.bandex == 'central':
     url = 'http://www.usp.br/coseas/cardapio.html'
@@ -42,8 +43,8 @@ for string in table.stripped_strings:
 if args.dia == 'segunda':
     init = list_menu.index('SEGUNDA-FEIRA')
     end = list_menu.index('TERÇA-FEIRA')
-#    for i in range(init, end):
-#        print(list_menu[i])
+    for i in range(init, end):
+       print(list_menu[i])
 # Repetir a estrategia para os outros dias...
 
 # Tratar aqui a formatacao dos itens da lista
