@@ -25,14 +25,23 @@ class Restaurante(object):
                 return bandex_html
             except KeyError:
                 print('Nome de bandeijao invalido')
-                raise RestauranteNaoExiste()
+                raise
 
     def print_menu(self, d, print_lunch, print_dinner):
+        retorno = ''
         if print_lunch:
             print('---Almoço---')
             menu = Menu(d, True, self.get_html())
-            print(menu.generate_meal_menu())
+            menu_meal = menu.generate_meal_menu()
+            retorno += menu_meal
+            print(menu_meal)
         if print_dinner:
+            if print_lunch:
+                retorno += ' '
             print('---Janta---')
             menu = Menu(d, False, self.get_html())
-            print(menu.generate_meal_menu())
+            menu_meal = menu.generate_meal_menu()
+            retorno += menu_meal
+            print(menu_meal)
+        return retorno
+

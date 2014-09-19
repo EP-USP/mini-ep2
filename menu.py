@@ -32,15 +32,17 @@ class Menu(object):
                     'sexta': 'SEXTA-FEIRA',
                     'sabado': 'SÁBADO',
                     'domingo': 'DOMINGO',
-                    'end': 'O'}
+                    }
         try:
             init_tag = day_tags[self.day]
             self.day_tag = init_tag
         except KeyError:
             print('dia da semana inexistente')
             raise
-        print(list_menu)
-        init = list_menu.index(init_tag)
+        try:
+            init = list_menu.index(init_tag)
+        except:
+            return ''
         try:
             end_index = keys.index(self.day) + 1
             end_tag = day_tags[keys[end_index]]
@@ -53,23 +55,30 @@ class Menu(object):
         day_menu = self.generate_day_menu()
         init_meal = [i for i, x in enumerate(day_menu) if x == self.day_tag]
         menu = ''
-        if self.isLunch:
-            init_range = init_meal[0] + 1
-            if len(init_meal) > 1:
-                end_range = init_meal[1]
+        try:
+            if self.isLunch:
+                init_range = init_meal[0] + 1
+                if len(init_meal) > 1:
+                    end_range = init_meal[1]
+                else:
+                    end_range = len(day_menu)
+                meal_range = range(init_range, end_range)
             else:
-                end_range = len(day_menu)
-            meal_range = range(init_range, end_range)
-        else:
-            try:
                 meal_range = range(int(init_meal[1]) + 1, len(day_menu))
-            except:
-                return 'FECHADO'
+        except:
+            return 'FECHADO'
         for i in meal_range:
             partial = day_menu[i]
+            if partial == 'FECHADO':
+                return partial
+            if len(partial.split('Refresco ')) > 1:
+                print('ALERTA')
+                l = partial.split('Refresco ')
+                partial = l[0] + 'Refresco' + '\n' + l[1]
             partial += '\n'
             if not partial[0].isupper() and not partial[0].isdigit():
                 menu = menu[:len(menu) - 1]
             menu +=  partial
-        # menu = re.sub(' / ', '/', menu)
+        menu = re.sub(' / ', '/', menu)
+        menu = menu[:len(menu) - 1]
         return menu
