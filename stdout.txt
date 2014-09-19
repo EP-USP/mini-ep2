@@ -1,8 +1,0 @@
-<_sre.SRE_Match object; span=(1968, 2259), match='<TR> <TD bgColor=#ffffff height=24 width=338> <P >
-<_sre.SRE_Match object; span=(2260, 3881), match='<TR> <TD bgColor=#ffffff height=164 width=379><PR>
-<_sre.SRE_Match object; span=(3882, 5508), match='<TR> <TD bgColor=#ffffff height=164 width=379><PR>
-<_sre.SRE_Match object; span=(5509, 7122), match='<TR> <TD bgColor=#ffffff height=164 width=379><PR>
-<_sre.SRE_Match object; span=(7123, 8715), match='<TR> <TD bgColor=#ffffff height=164 width=379><PR>
-<_sre.SRE_Match object; span=(8716, 10439), match='<TR> <TD bgColor=#ffffff height=164 width=379><PR>
-<_sre.SRE_Match object; span=(10440, 12082), match='<TR> <TD bgColor=#ffffff height=1 width=379><PRE >
-<_sre.SRE_Match object; span=(12083, 13463), match='<TR> <TD bgColor=#ffffff height=164 width=379><PR>
